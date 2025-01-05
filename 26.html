@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Nippo-www/stylesheet.css">
+	<script src="typed.umd.js"></script> 
+</head>
+<body>
+
+<pre>
+
+
+
+
+
+
+<a href="27.html"><span id="typed1"></span></a>
+
+<a href="27.html"><span id="typed2"></span></a> 
+
+
+
+
+
+
+
+</pre>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Tu remarques les cils qui battent dans chaque conversation, les regards qui évitent le tien,\n"+
+                "qui glissent de haut en bas et de gauche à droite, qui passent jamais au centre.\n"+
+                "Ceux qui étaient les plus chaleureux arrachent maintenant vingt poils de leurs sourcils chaque fois qu’ils me croisent."
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            
+            loop: false,
+            showCursor: true,
+            
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+            setTimeout(function() {
+                var typed2 = new Typed("#typed2", {
+                    strings: [
+                        "Ces vingt poils remplacent tous les mots qui pourraient avoir du sens,\n"+ 
+                        "alors que leurs mâchoires grincent, leurs lèvres bafouillent, leurs voix se mêlent de bégaiements confus,\n"+ 
+                        "avant qu’ils ne s’éloignent, plus loin, emportant toujours avec eux leur gêne."
+                    ],
+                    typeSpeed: 60,
+                    backSpeed: 30,
+                    showCursor: true,
+                    startDelay: 1800,
+                    loop: false
+                });
+              }, 800);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+	background:black;
+	font-family: 'Nippo-Light';
+	font-size:2vw;
+	color: white;
+}
+pre {
+	font-family: 'Nippo-Light';
+	font-size:2vw;
+}
+
+a { 
+	text-decoration: none;
+}
+a:link, a:visited { color:#fff; }
+a:hover, a:active { color:#fff; }
+* {
+	transition: all 0.1s ease-in;
+} 
+
+.vide {
+            visibility: hidden;
+}
+a:hover .vide {
+            visibility: visible; 
+            color: white; 
+        }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Nippo-www/stylesheet.css">
+	<script src="typed.umd.js"></script> 
+</head>
+<body>
+	
+<a href="10.html">
+<pre>
+
+
+
+
+
+
+
+ <a href="10.html"><span id="typed1"></span></a> 
+
+
+ <a href="10.html"><span id="typed2"></span></a>
+
+
+
+
+
+
+
+
+
+
+</pre>
+</a>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var typed1 = new Typed("#typed1", {
+            strings: ["Je ne sais vraiment pas ce que je dois admettre."],
+            typeSpeed: 60,
+            backSpeed: 30,
+            
+            loop: false,
+            showCursor: true,
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+            setTimeout(function() {
+                var typed2 = new Typed("#typed2", {
+                    strings: [ "C’est pourtant une histoire complète quand je dis que je vais bien,\n"+ 
+                        "une histoire avec un début et une fin, qui ne veut rien dire d’autre que que je vais bien."],
+                    typeSpeed: 57,
+                    backSpeed: 30,
+                    startDelay: 60,
+                    loop: false
+                });
+               }, 800);
+            }
+        });
+    });
+</script>
+</body>
+</html>

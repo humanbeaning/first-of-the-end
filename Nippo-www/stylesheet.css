@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Nippo-Light';
+    src: url('Nippo-Light.eot');
+    src: url('Nippo-Light.eot?#iefix') format('embedded-opentype'),
+        url('Nippo-Light.woff2') format('woff2'),
+        url('Nippo-Light.woff') format('woff'),
+        url('Nippo-Light.ttf') format('truetype'),
+        url('Nippo-Light.svg#Nippo-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nippo-Regular';
+    src: url('Nippo-Regular.eot');
+    src: url('Nippo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Nippo-Regular.woff2') format('woff2'),
+        url('Nippo-Regular.woff') format('woff'),
+        url('Nippo-Regular.ttf') format('truetype'),
+        url('Nippo-Regular.svg#Nippo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nippo-Bold';
+    src: url('Nippo-Bold.eot');
+    src: url('Nippo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Nippo-Bold.woff2') format('woff2'),
+        url('Nippo-Bold.woff') format('woff'),
+        url('Nippo-Bold.ttf') format('truetype'),
+        url('Nippo-Bold.svg#Nippo-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nippo-Medium';
+    src: url('Nippo-Medium.eot');
+    src: url('Nippo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Nippo-Medium.woff2') format('woff2'),
+        url('Nippo-Medium.woff') format('woff'),
+        url('Nippo-Medium.ttf') format('truetype'),
+        url('Nippo-Medium.svg#Nippo-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nippo-Extralight';
+    src: url('Nippo-Extralight.eot');
+    src: url('Nippo-Extralight.eot?#iefix') format('embedded-opentype'),
+        url('Nippo-Extralight.woff2') format('woff2'),
+        url('Nippo-Extralight.woff') format('woff'),
+        url('Nippo-Extralight.ttf') format('truetype'),
+        url('Nippo-Extralight.svg#Nippo-Extralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

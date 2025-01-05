@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Nippo-www/stylesheet.css">
+	<script src="typed.umd.js"></script> 
+	<style>
+       
+        .hidden-cursor .typed-cursor {
+            display: none;
+        }
+        .typed-cursor {
+            animation: blink 0.6s infinite; 
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+
+
+<a href="26.html"><span id="typed1"></span></a>
+
+<a href="26.html"><span id="typed2"></span></a>
+
+<a href="26.html"><span id="typed3"></span></a>
+
+
+
+<a href="26.html"><span id="typed4"></span></a>
+
+
+</pre>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // 第一段文字
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Petite, on me complimentait souvent en disant à quel point mes yeux ressemblaient aux siens. \n"+
+                "Nos iris d’un brun profond, si noirs qu’ils paraissaient presque opaques mais se teintaient d’ambre sous la lumière,\n"+
+                "et cette petite tache de naissance dans le coin interne de l’œil gauche, alignée avec le nez."
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: false,
+            showCursor: true,
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+                
+                // 第二段文字
+                var typed2 = new Typed("#typed2", {
+                    strings: [
+                        "Les parents éloignés toujours prêts à se regrouper autour comme un essaim d’insectes, \n"+ 
+                        "se penchant un à un pour plonger leur regard dans le mien. \n"+ 
+                        "Des fourmis encerclant une miette tombée d’un sandwich tout juste préparé."
+                    ],
+                    typeSpeed: 58,
+                    backSpeed: 30,
+                    showCursor: true,
+                    loop: false,
+                    onComplete: function() {
+                        document.querySelector("#typed2 ~ .typed-cursor").style.display = "none";
+                        setTimeout(function() {
+                        var typed3 = new Typed("#typed3", {
+                            strings: [
+                                "Ils s’émerveillaient, s’exclamaient, “Oh ! Ah ! Ha ha !”, et finissaient par me traîner jusqu’à ma mère.\n"+
+                                "À l’époque, je ne lui arrivais qu’à la taille, mais que j’étais si contente de ces éloges. \n"+
+                                "Un enfant avec les yeux de sa mère, quelle fierté !"
+                            ],
+                            typeSpeed: 58,
+                            backSpeed: 30,
+                            showCursor: true,
+                            
+                            loop: false,
+                            onComplete: function() {
+                                document.querySelector("#typed3 ~ .typed-cursor").style.display = "none";
+
+                                // 在第四段文字前加入延时
+                                setTimeout(function() {
+                                    // 临时隐藏光标
+                                    document.querySelector("#typed4").classList.add("hidden-cursor");
+                                    
+                                    // 第四段文字
+                                    var typed4 = new Typed("#typed4", {
+                                        strings: ["Aujourd’hui tout s’est transformé en malédiction."],
+                                        typeSpeed: 60,
+                                        backSpeed: 25,
+                                        showCursor: true,
+                                        startDelay: 3000,
+                                        loop: false,
+                                        onBegin: function() {
+                                            // 显示光标
+                                            document.querySelector("#typed4").classList.remove("hidden-cursor");
+                                        }
+                                    });
+                                }, 1000); // 延时1秒（1000毫秒）
+                            }
+                        });
+                    }, 800); // 延时1秒（1000毫秒）
+                            }
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

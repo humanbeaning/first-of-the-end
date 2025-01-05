@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Typed.js Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Nippo-www/stylesheet.css">
+    <script src="typed.umd.js"></script> 
+    <style>
+        .explosion-container {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 0; /* 确保容器在页面顶部 */
+            z-index: 10; /* 确保爆炸效果在其他文本上层 */
+        }
+
+        /* 单词的覆盖效果 */
+        .explosion {
+            position: absolute;
+            color: white;
+            opacity: 0;
+            transform: scale(0.5);
+            background-color: black; /* 与页面背景相同的颜色 */
+            padding: 0 8px; /* 紧密包裹单词 */
+            border-radius: 3px; /* 略微圆角 */
+            transition: opacity 0.5s, transform 0.5s ease-out;
+            display: inline-block; /* 使每个单词单独显示 */
+        }
+
+        /* 设置每个单词的特定位置 */
+        #word-pouf { font-size: 2.5em; left: 5%; top: 5%; } /* 第一行最左 */
+        #word-clac { font-size: 10em; left: 90%; top: 70%; transform: translateX(-50%); } /* 第四行居中 */
+        #word-bam { font-size: 4em; left: 20%; top: 90%; transform: translateX(-100%); } /* 第六行偏右 */
+        #word-boum { font-size: 6em; left: 70%; top: 20%; transform: translateX(-100%); } /* 第三行靠右 */
+
+        /* 显示爆炸效果时的动画 */
+        .show-explosion {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /* 过渡效果 */
+        .fade-line {
+            display: inline-block;
+            transition: opacity 0.5s ease;
+        }
+
+    </style>
+</head>
+<body>
+    
+<pre>
+
+<a href="22.html"><span id="typed1"></span></a>
+
+<a href="22.html"><span id="typed2"></span></a>
+
+                                                                         
+ <a href="22.html">
+        <div class="explosion-container">
+            <span id="word-pouf" class="explosion"></span>
+            <span id="word-clac" class="explosion"></span>
+            <span id="word-bam" class="explosion"></span>
+            <span id="word-boum" class="explosion"></span>
+        </div>
+</a>                                                                                                                                                        <a href="22.html"><span id="typed4"></span></a>
+</pre>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Déchirer tes muscles, traverser tes organes. Les angles s’effacent soudainement de ton champ de vision\n"+
+                "et se fondent dans des blocs de couleurs, les lignes s’étirent, les contours disparaissent.\n"+
+                "Tu essaies de les retrouver et comme ça un grondement s'infiltre dans tes oreilles,\n"+
+                "celui d’un vieux train tout rouillé qui entre en gare, pendant trois secondes ou travers l'éternité,\n"+
+                "après le sifflement commence à changer de ton, à devenir plus aigu, plus rapide, plus tranchant, plus perçant,\n"+
+                "jusqu’à devenir un trousseau de clés accroché à la taille de quelqu’un,\n"+
+                "des appels publicitaires polluants commençant par 01 six fois par jour,\n"+
+                "le grincement d’une porte en bois qui ne se ferme jamais et laisse des marques sur le carrelage,\n"+
+                "puis le murmure des doigts qui grattent les ongles pendant une conversation intime.\n"
+            ],
+            typeSpeed: 55,
+            backSpeed: 30,
+            loop: false,
+            showCursor: true,
+            
+            onComplete: function() {
+                
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+                
+               
+                
+                    var typed2 = new Typed("#typed2", {
+                        strings: [
+                            "Puis tu remarques un léger “pouf” quelque part à l’extérieur qui t’attire par la fenêtre ; \n"+ 
+                            "tu vas sans doute le faire, comme si c’était écrit, comme si tout était prédestiné. Et bien sûr tu finis par le trouver,\n"+ 
+                            "noté sur les nuages, imprimé sur le gazon. Mais soudain ce petit mot, ce simple bruit se met à se diviser,\n"+ 
+                            "à se multiplier et à muter en d’autres sons, envahissant chaque nuage et chaque brin d’herbe que tu vois :"
+                        ],
+                        typeSpeed: 50,
+                        backSpeed: 30,
+                        showCursor: true,
+                        
+                        loop: false,
+                        
+                        onComplete: function() {
+                        document.querySelector("#typed2 ~ .typed-cursor").style.display = "none";
+                        
+                        // 依次显示爆炸单词
+                        setTimeout(function() { showExplosionEffect("word-pouf", "pouf"); }, 600);
+                        setTimeout(function() { showExplosionEffect("word-clac", "clac"); }, 1000);
+                        setTimeout(function() { showExplosionEffect("word-bam", "bam"); }, 1400);
+                        setTimeout(function() { showExplosionEffect("word-boum", "boum"); }, 1800);
+
+                        // 显示最后一段文字
+                        setTimeout(function() {
+                            var typed4 = new Typed("#typed4", {
+                                strings: ["avalant tous les autres."],
+                                typeSpeed: 40,
+                                showCursor: true,
+                                loop: false
+                            });
+                        }, 2200); // 单词显示完后再显示最后一段
+                    }
+                });
+            }
+        });
+
+        // 爆炸单词效果函数
+        function showExplosionEffect(elementId, word) {
+            var element = document.getElementById(elementId);
+            element.textContent = word;
+            element.classList.add("show-explosion");
+        }
+    });
+</script>
+
+</body>
+</html>

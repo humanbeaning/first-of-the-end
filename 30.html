@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Nippo-www/stylesheet.css">
+	<script src="typed.umd.js"></script> 
+</head>
+<body>
+	
+<pre>
+
+
+
+
+
+
+
+<a href="31.html"><span id="typed1"></span></a>
+
+<a href="31.html"><span id="typed2"></span></a>
+
+
+
+
+
+
+</pre>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Tu vois, que les gens sont étranges. Ils poursuivent toujours les choses concrètes du moment : \n"+
+                "l’argent, le statut, la famille…des mots qui semblent clairs, \n"+
+                "des raisons, des excuses, pour comprendre le passé et prédire l’avenir."
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            
+            loop: false,
+            showCursor: true,
+            
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+           
+                var typed2 = new Typed("#typed2", {
+                    strings: [ "Mais dès qu’ils reçoivent une explication ils la rejettent."],
+                    typeSpeed: 60,
+                    backSpeed: 30,
+                    showCursor: true,
+                    startDelay: 100,
+                    loop: false
+                });
+              }, 
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Nippo-www/stylesheet.css">
+	<script src="typed.umd.js"></script> 
+</head>
+<body>
+	
+<a href="16.html">
+<pre>
+
+
+
+
+
+
+<a href="16.html"><span id="typed1"></span></a> 
+
+ <a href="16.html"><span id="typed2"></span></a>
+
+
+
+
+
+
+
+</pre>
+</a>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Il ne me reste que les mots que je t’ai déjà partagés, voire moins, il ne me reste plus des mots. \n"+
+                "Je suis en train de perdre mes souvenirs d’elle comme j’oublie tout le reste, \n"+
+                "les couleurs, les formes, les textures, les goûts. "
+            ],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: false,
+            showCursor: true,
+            
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+            setTimeout(function() {
+                var typed2 = new Typed("#typed2", {
+                    strings: [
+                        "Les goûts, tu sais, elle avait sur elle une odeur de crevette morte, surtout sur ses doigts, sous ses ongles.\n"+ 
+                        "Cette odeur restait sur tout ce que ses doigts touchaient, sur le lit qu’elle faisait,\n"+ 
+                        "les vêtements qu’elle lavait, le dîner qu’elle préparait,\n"+ 
+                        "l’argent qu’elle manipulait ; cette odeur humide et pourrie effaçait même le goût métallique de la monnaie oxydée. "
+                    ],
+                    typeSpeed: 65,
+                    backSpeed: 30,
+                    showCursor: true,
+                    loop: false
+                });
+              }, 600);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Nippo-www/stylesheet.css">
+    <script src="typed.umd.js"></script> 
+    <style>
+        .typed-cursor {
+            animation: blink 0.6s infinite; 
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    
+<pre>
+
+
+
+
+
+ <a href="3.html"><span id="typed1"></span></a>
+
+
+
+
+ <a href="3.html"><span id="typed2"></span></a>
+
+
+
+
+</pre>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var typed1 = new Typed("#typed1", {
+            strings: [
+                "Les murs carrés, la pièce vide, au-dessus cette ampoule que j’oublie toujours de changer, \n"+
+                "clignote, haletante, et dehors c’est la nuit morte,\n"+
+                "prête à dévorer la faible lumière qui reste encore dans ce petit 11m2."
+            ],
+            typeSpeed: 55,
+            backSpeed: 30,
+            
+            loop: false,
+            showCursor: true,
+            
+            onComplete: function() {
+                document.querySelector("#typed1 ~ .typed-cursor").style.display = "none";
+            setTimeout(function() {
+                var typed2 = new Typed("#typed2", {
+                    strings: [
+                        "Je me souviens que je devais te répondre. Je me souviens de tes mots.\n"+ 
+                        "Beaucoup de verbes, beaucoup d’adjectifs, beaucoup de noms,\n"+ 
+                        "des descriptions imbriquées, des métaphores dans les métaphores,\n"+ 
+                        "des exemples après des exemples."
+                    ],
+                    typeSpeed: 57,
+                    backSpeed: 30,
+                    showCursor: true,
+                    startDelay: 1800,
+                    loop: false
+                });
+              }, 800);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
